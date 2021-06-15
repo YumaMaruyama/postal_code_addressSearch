@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+
+<!-- Bootstrap  jQuery Bootstrapの読み込み必要がある-->
+<link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"
+	rel="stylesheet"></link>
+<!--　jQueryのjsファイル タイムリーフでファイル読み込み　 -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!--　Bootstrap のjsファイル（jQueryの後に読み込む） タイムリーフでファイル読み込み　 -->
+<script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+
+<script src="js/SocialShare.min.js"></script>
+
+<link th:href="@{/css/zipcodeConfirm.css}" rel="stylesheet"></link>
+<link th:href="@{/css/jpegZipcodeConfirm.css}" rel="stylesheet"></link>
+
+<title>zipcode-confirm</title>
+</head>
+<body class="jpegZipcodeConfirm"
+	background="/css/11aef8be31238f2981ee85a894cba60e_t.jpeg">
+
+	<!-- jQuery フォームリセット -->
+	<script>
+		$(function() {
+			// 入力値をリセット
+			$("#resetButton").click(function() {
+				$('#textField1').val("");
+			});
+		});
+	</script>
+
+	<table>
+		<h5 class="h5">検索結果</h5>
+	</table>
+	<table class="zipcodeConfirmFontSize zipcodeConfirmMargin table table-borderd table-hover">
+		<div th:each="item : ${zipcodeList}" th:object="${item}">
+		<tr>
+			<th class="direction" >郵便番号</th>
+			<td class="zipcodeConfirmTdRight" th:text="*{zipcode}"></td>
+
+		</tr>
+
+		<tr>
+			<th class="direction">都道府県コード</th>
+			<td class="zipcodeConfirmTdRight" th:text="*{prefcode}"></td>
+		</tr>
+
+		<tr>
+			<th class="direction">都道府県</th>
+			<td class="zipcodeConfirmTdRight" th:text="*{address1}"></td>
+		</tr>
+
+
+		<tr>
+			<th class="direction">市区町村1</th>
+			<td class="zipcodeConfirmTdRight" th:text="*{address2}"></td>
+		</tr>
+
+		<tr>
+			<th class="direction">市区町村2</th>
+			<td class="zipcodeConfirmTdRight" th:text="*{address3}"></td>
+		</tr>
+
+		<tr>
+			<th class="direction">都道府県(カナ)</th>
+			<td class="zipcodeConfirmTdRight" th:text="*{kana1}"></td>
+		</tr>
+
+		<tr>
+			<th class="direction">市区町村1(カナ)</th>
+			<td class="zipcodeConfirmTdRight" th:text="*{kana2}"></td>
+		</tr>
+
+		<tr>
+			<th class="direction">市区町村2(カナ)</th>
+			<td class="zipcodeConfirmTdRight" th:text="*{kana3}"></td>
+		</tr>
+		</div>
+	</table>
+
+	<form method="post" th:action="@{/confirm}" style="padding-left: 32px;">
+		<table>
+			<tr>
+				<th style="padding: 40px 0px 0px 480px;"><span
+					style="font-size: 17px">他の郵便番号で検索</span><input id="textField1" type="text" class="form-control"
+					style="font-size: x-large;" name="zipcode"></th>
+			</tr>
+		</table>
+		<button class="btn btn-border borderBtn" type="submit" name="search"
+			><span>検索</span></button>
+		<button id="resetButton" class="btn btn-border2 borderBtn2 reset" type="button" name="reset"
+			>
+			<span style="color: #5a5a5a;">リセット</span>
+		</button>
+		<button class="btn btn-border3 borderBtn3 returnHomeButton" type="submit" name="home">ホーム画面に戻る</button>
+	</form>
+</body>
+</html>

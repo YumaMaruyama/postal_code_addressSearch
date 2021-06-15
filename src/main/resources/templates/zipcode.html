@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+
+<!-- Bootstrap  jQuery Bootstrapの読み込み必要がある-->
+<link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"
+	rel="stylesheet"></link>
+<!--　jQueryのjsファイル タイムリーフでファイル読み込み　 -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!--　Bootstrap のjsファイル（jQueryの後に読み込む） タイムリーフでファイル読み込み　 -->
+<script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+
+<script src="js/SocialShare.min.js"></script>
+
+<link th:href="@{/css/zipcode.css}" rel="stylesheet"></link>
+<link th:href="@{/css/jpegZipcode.css}" rel="stylesheet"></link>
+
+<title>zipcode</title>
+</head>
+<body class="jpeg"
+	background="/css/af8a80be8072c971ee96a92b9ca7e0f6_t.jpeg">
+
+	<!-- jQuery フォームリセット -->
+	<script>
+		$(function() {
+			// 入力値をリセット
+			$("#resetButton").click(function() {
+				$('#textField1').val("");
+			});
+		});
+	</script>
+
+	<table>
+		<th>
+		<td
+			class="title">郵便番号で住所検索</td>
+		</th>
+	</table>
+
+	<form method="post" th:action="@{/confirm}">
+		<table>
+			<label class="errorResult" th:text="${result}"
+				>問い合わせ結果表示</label>
+			<tr>
+				<th class="postNum"><span
+					style="font-size: 17px">郵便番号</span><input id="textField1"
+					type="text" class="form-control" style="font-size: x-large;"
+					name="zipcode"></th>
+			</tr>
+		</table>
+		<button class="btn btn-gradient searchBtn" type="submit" name="search">
+			<span>検索</span>
+		</button>
+		<button class="btn btn-gradient resetBtn" id="resetButton"
+			type="button" name="reset">
+			<span>リセット</span>
+		</button>
+	</form>
+	<br>
+	<br>
+	<h2 class="h2">
+		郵便番号で住所が検索できます。<br>郵便番号のハイフンは付けても付けなくても検索ができます。
+	</h2>
+
+</body>
+</html>

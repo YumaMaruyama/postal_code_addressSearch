@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+.zipcodeConfirmFontSize {
+	font-size: 20px;
+}
+
+.zipcodeConfirmMargin {
+	margin: 0px 0px 0px 443px;
+}
+
+.zipcodeConfirmTdRight {
+	text-align: right;
+}
+
+.table {
+	width: 36% !important;
+}
+
+.h5 {
+	font-size: 36px;
+	text-align: center;
+	margin-top: 24px;
+	margin-bottom: 10px;
+}
+
+.direction {
+	text-align: left;
+}
+
+.borderBtn {
+	margin: 10px 0px 0px 483px;
+	font-size: 20px;
+	background-color: #79aedc !important;
+	margin-top: 30px;
+	padding: 3px !important;
+}
+
+.borderBtn2 {
+	font-size: 20px;
+	background-color: #abfbb5 !important;
+	margin-top: 29px;
+	margin-top: 29px;
+	padding: 3px !important;
+}
+
+.borderBtn3 {
+	font-size: 20px;
+	background-color:#e65b5b !important;
+	margin-top: 29px;
+	padding: 3px !important;
+}
+
+button.btn-border {
+	padding: 1.5rem 4rem;
+	-webkit-transform: skew(-15deg);
+	transform: skew(-15deg);
+	color: #fff;
+	border: 3px solid #57b8ff;
+	border-radius: 0;
+	background: #555;
+}
+
+button.btn-border:hover:before {
+	top: -3px;
+	background: #000;
+}
+
+button.btn-border:hover:after {
+	bottom: -3px;
+	background: #000;
+}
+
+button.btn-border:hover {
+	-webkit-transform: skew(-5deg);
+	transform: skew(-5deg);
+	color: #fff;
+}
+
+button.btn-border2 {
+	padding: 1.5rem 4rem;
+	-webkit-transform: skew(-15deg);
+	transform: skew(-15deg);
+	color: #fff;
+	border: 3px solid #9ce268;
+	border-radius: 0;
+	background: #555;
+}
+
+button.btn-border2:hover:before {
+	top: -3px;
+	background: #000;
+}
+
+button.btn-border2:hover:after {
+	bottom: -3px;
+	background: #000;
+}
+
+button.btn-border2:hover {
+	-webkit-transform: skew(-5deg);
+	transform: skew(-5deg);
+	color: #fff;
+}
+
+button.btn-border3 {
+	padding: 1.5rem 4rem;
+	-webkit-transform: skew(-15deg);
+	transform: skew(-15deg);
+	color: #fff;
+	border: 3px solid #f9a060;
+	border-radius: 0;
+	background: #555;
+}
+
+button.btn-border3:hover:before {
+	top: -3px;
+	background: #000;
+}
+
+button.btn-border3:hover:after {
+	bottom: -3px;
+	background: #000;
+}
+
+button.btn-border3:hover {
+	-webkit-transform: skew(-5deg);
+	transform: skew(-5deg);
+	color: #fff;
+}

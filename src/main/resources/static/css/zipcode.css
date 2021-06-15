@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+.h2 {
+	text-align: center;
+}
+
+button.btn-gradient {
+	-webkit-transform: skew(-15deg);
+	transform: skew(-15deg);
+	color: #fff;
+	border-radius: 0;
+	background-image: -webkit-gradient(linear, left top, right top, from(#2af598),
+		to(#009efd));
+	background-image: -webkit-linear-gradient(left, #2af598 0%, #009efd 100%);
+	background-image: linear-gradient(90deg, #2af598 0%, #009efd 100%);
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+button.btn-gradient:hover {
+	-webkit-transform: skew(0);
+	transform: skew(0);
+	color: #fff;
+	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+	box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+}
+
+.searchBtn {
+	margin: 10px 0px 0px 580px;
+	font-size: 20px;
+	background-color: #a6a8ea;
+	margin-top: 30px;
+}
+
+.resetBtn {
+	font-size: 20px;
+	background-color: #abfbb5;
+	margin-top: 29px;
+}
+
+.title {
+	font-size: 50px;
+	width: 1340px; text-center;
+	text-align-last: center;
+	padding-top: 50px;
+}
+
+.errorResult {
+	font-size: 21px;
+	padding: 0px 0px 0px 500px;
+	color: #ff0d33;
+}
+
+.postNum {
+	padding: 55px 0px 0px 500px;
+}
