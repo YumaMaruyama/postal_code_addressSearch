@@ -18,7 +18,6 @@ public class ZipcodeService {
 	private static final String url = "http://zipcloud.ibsnet.co.jp/api/search?zipcode={zipcode}";
 
 	public ZipcodeDTO service(String zipcode) {
-		System.out.println("service到達");
 		System.out.println("zipcode  " + zipcode);
 
 		return restTemplate.getForObject(url, ZipcodeDTO.class,zipcode);

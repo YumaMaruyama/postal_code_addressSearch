@@ -18,7 +18,7 @@ public class ZipCodeControllerController {
 	@Autowired
 	ZipcodeService zipcodeService;
 
-	//郵便番号で住所を検索するフォーム
+	//郵便番号で住所検索画面
 	@GetMapping("/zipcode")
 	public String getZipcodeForm(HttpSession session, Model model) {
 
@@ -27,12 +27,12 @@ public class ZipCodeControllerController {
 
 
 
-	//郵便番号情報を表示
+	//検索結果画面
 	@PostMapping(value = "/confirm",params = "search")
 	public String postZipcodeConfirm(HttpSession session, Model model, @RequestParam("zipcode") String zipcode) {
-		System.out.println("住所検索（search）到達");
-		System.out.println("zipcodeの中身　　" + zipcode);
-		//バリデーションチェックでnull or 空文字の場合にエラーメッセージ
+		
+		
+		//null or 空文字の場合はエラーメッセージを表示
 		if (zipcode == null || zipcode.isEmpty()) {
 			System.out.println("エラーチェック到達");
 			model.addAttribute("result", "正しい郵便番号を入力してください");
@@ -48,6 +48,7 @@ public class ZipCodeControllerController {
 
 	}
 
+	//住所検索画面に遷移する
 	@PostMapping(value = "/confirm", params = "home")
 	public String postConfirmHome(HttpSession session,Model model) {
 
