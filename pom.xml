@@ -104,6 +104,7 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+					<executable>true</executable><!-- デーモン化 -->
 				</configuration>
 			</plugin>
 		</plugins>
