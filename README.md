@@ -1,4 +1,6 @@
 # postal_code_addressSearch
+![iOS の画像 (6)](https://user-images.githubusercontent.com/83486993/149624025-b8a74a33-982b-45b3-8def-bc4210e1d9bd.png)
+
 
 ## [アプリ概要]
 入力した郵便番号から分かる住所の情報が表示される便利なアプリです。  
